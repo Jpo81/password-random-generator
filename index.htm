@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senha Aleatória</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .slider-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        #senha-slider {
+            margin-right: 10px;
+        }
+        #senha-length {
+            font-weight: bold;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #senha-gerada {
+            font-size: 1.2em;
+            font-weight: bold;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Senha Aleatória</h1>
+        <div class="slider-container">
+            <input type="range" id="senha-slider" min="1" max="50" value="10" oninput="updateLengthDisplay()">
+            <span id="senha-length">10</span> caracteres
+        </div>
+        <div class="buttons">
+            <button onclick="gerarSenha()">Gerar Senha</button>
+            <button onclick="gerarSenhaSimples()">Gerar Senha Simples</button>
+        </div>
+        <p id="senha-gerada"></p>
+    </div>
+    <script src="senha.js"></script>
+</body>
+</html>
