@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: var(--container-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#senha-slider {
+    margin-right: 10px;
+}
+
+#senha-length {
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+#senha-gerada {
+    font-size: 1.2em;
+    font-weight: bold;
+    word-break: break-all;
+    margin-bottom: 10px;
+}
+
+#btn-copiar {
+    display: none;
+}
+
+#toggle-theme {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#toggle-theme:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* Tema Claro */
+.light-theme {
+    --container-bg: #fff;
+    --button-bg: #007bff;
+    --button-hover-bg: #0056b3;
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+/* Tema Escuro */
+.dark-theme {
+    --container-bg: #333;
+    --button-bg: #6f42c1;
+    --button-hover-bg: #5936a2;
+    background-color: #1e1e1e;
+    color: #fff;
+}
