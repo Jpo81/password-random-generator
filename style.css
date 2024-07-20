@@ -13,26 +13,35 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    box-sizing: border-box;
 }
 
 .slider-container {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 #senha-slider {
     margin-right: 10px;
+    flex-grow: 1;
+    min-width: 200px;
 }
 
 #senha-length {
     font-weight: bold;
+    min-width: 70px;
+    text-align: center;
 }
 
 .buttons {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 button {
@@ -43,6 +52,9 @@ button {
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
+    flex-grow: 1;
+    min-width: 100px;
+    margin-bottom: 10px;
 }
 
 button:hover {
@@ -54,10 +66,24 @@ button:hover {
     font-weight: bold;
     word-break: break-all;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 #btn-copiar {
     display: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#btn-copiar:hover {
+    background-color: var(--button-hover-bg);
 }
 
 #toggle-theme {
